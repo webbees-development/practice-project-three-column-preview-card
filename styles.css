@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* reset basic styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* variables */
+:root {
+    --clr-primary-1: hsl(31, 77%, 52%);
+    --clr-primary-2: hsl(184, 100%, 22%);
+    --clr-primary-3: hsl(179, 100%, 13%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-white-o75: hsla(0, 0%, 100%, 0.75);
+    --clr-light-grey: hsl(0, 0%, 95%);
+}
+
+/* styles */
+body {
+    font-size: 15px;
+
+    background-color: var(--clr-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    background-color: var(--clr-primary);
+    padding: 3rem;
+}
+
+article > h1 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: var(--clr-light-grey);
+
+    margin-block-end: 1.5rem;
+}
+
+article > img {
+    display: block;
+    margin-block-end: 2rem;
+}
+
+article > p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: var(--clr-white-o75);
+
+    margin-block-end: 1.5rem;
+}
+
+article > button {
+    border: solid 2px var(--clr-primary);
+    background-color: var(--clr-light-grey);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--clr-primary);
+
+    cursor: pointer;
+
+    transition: all 50ms ease-out;
+}
+
+article > button:hover, 
+article > button:focus-visible {
+    color: var(--clr-light-grey);
+    background-color: var(--clr-primary);
+    border-color: var(--clr-light-grey);
+}
+
+article > button:focus-visible {
+    outline: none;
+}
+
+main {
+    margin: 1.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card article:nth-of-type(1) {
+    --clr-primary: var(--clr-primary-1);
+}
+
+.card article:nth-of-type(2) {
+    --clr-primary: var(--clr-primary-2);
+}
+
+.card article:nth-of-type(3) {
+    --clr-primary: var(--clr-primary-3);
+}
+
+@media (min-width: 40rem) {
+    article {
+        padding: 1.5rem;
+    }
+
+    article > button {
+        padding: 0.9rem 2rem;
+        border-radius: 2rem;
+    }
+
+    article > p {
+        line-height: 2.2;
+
+        margin-block-end: 5rem;
+    }
+
+    .card {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 50rem) {
+    article {
+        padding: 3rem;
+    }
+}
